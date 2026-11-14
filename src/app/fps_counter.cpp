@@ -84,6 +84,6 @@ void app::DrawFps(X86Context& ctx) {
 void app::DrawWatermark(X86Context& ctx) {
     constexpr int kEnd = kVersus ? 544 : 560, kBaseline = kVersus ? 64 : 46, kTextSize = kVersus ? 15 : 16;
     char text[32];
-    std::snprintf(text, sizeof text, "XBE Recomp V%d", kVersion);
+    std::snprintf(text, sizeof text, "XBE Recomp V%d-Legacy", kVersion);
     Text(ctx, text, kEnd, kBaseline, kTextSize, 0xFFB0B0B0u, false, true);
 }
