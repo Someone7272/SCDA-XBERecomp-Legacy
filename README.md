@@ -1,21 +1,24 @@
 # Splinter Cell: Double Agent - XBE Recomp (Legacy CPUs)
-## Forked from [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp)
-The goal of this fork is to experiment with older CPUs. The main release requires SSE4.x and SSSE3 CPU instructions, this fork removes them and replaces them with instructions that older CPUs can execute. Currently, it targets AMD K10 (Phenom II) CPUs.
-
-> [!WARNING]
-> POPCNT is still required.
-
-## Experimental
-I have not yet had a chance to test in-depth, so expect issues. Please do not create issues unless it is specific to this fork. If you can replicate the issue on the main [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp), it belongs there.
-
-## About
 An unofficial native PC port of the original Xbox version of Splinter Cell: Double Agent via static recompilation, built into a 64 bit Windows executable. The game's x86 code is translated to C++ ahead of time, the Xbox kernel, Direct3D and DirectSound calls are implemented on Windows, and everything is drawn with Direct3D 12 and played through XAudio2. Made with the [Xbox XBE Recomp](https://github.com/TGP482/XboxXBE-Recomp) tool, created for this game originally.
 
 > [!NOTE]
 > This project does not include any game assets. You must provide the files from your own legally acquired copy of the game to install or build.
 
+## About this fork
+The goal of this fork is to extend compatibility with older CPUs. Builds from the original [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo require SSE4.x CPU instructions, this fork replaces them with instructions that older CPUs can execute. The current target is AMD K10 (Phenom-era) CPUs. There should not be any behavior changes to the game, everything should function the same as builds from the original repo.
+
+> [!IMPORTANT]
+> POPCNT is still required.
+
 ## Installation
-No releases of this fork are currently planned until more testing has been done. In the meantime, you can build it from source (see instructions below).
+Ask yourself, **do you really need this legacy build?** It will work on newer CPUs, but will not take advantage of SSE4.x CPU instructions. If you're unsure, you probably don't need this build. Please try a build from the original [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo first.
+
+No releases of this fork are currently planned until more testing has been done. In the meantime, you can build it from source (see [build instructions](#Building) below).
+
+<img width="1920" height="1080" alt="Recomp Settings" src="https://github.com/user-attachments/assets/d13e1fb6-ba97-4067-84e1-c2362d66d7c4"/>
+
+## Reporting issues
+Only issues that are specific to this fork will be investigated. If you can reproduce the same issue with a build from the original [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo, it belongs there.
 
 ## Features
 ### Display
@@ -180,7 +183,7 @@ As the host, you must port forward the following ports on your router so other p
   - Windows 10 64-bit
 - **CPU** with 2 cores and support for SSE2 and POPCNT
   - Intel Nehalem (Intel Core 1st Generation)
-  - AMD K10 (AMD Phenom II series)
+  - AMD K10 (AMD Phenom Series)
 - **GPU** with support for Direct3D 12
   - NVIDIA GeForce GT 630 (Kepler)
   - AMD Radeon HD 7750

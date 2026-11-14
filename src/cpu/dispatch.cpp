@@ -43,7 +43,7 @@
 #pragma comment(linker, "/EXPORT:ldexp=ucrtbase.ldexp")
 #pragma comment(linker, "/EXPORT:frexp=ucrtbase.frexp")
 
-// for non-SSSE3/SSE4.x, maybe lower performance
+// for non-SSE4.x, maybe lower performance
 #pragma comment(linker, "/EXPORT:floor=ucrtbase.floor")
 #pragma comment(linker, "/EXPORT:floorf=ucrtbase.floorf")
 #pragma comment(linker, "/EXPORT:ceil=ucrtbase.ceil")
