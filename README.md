@@ -4,21 +4,29 @@ An unofficial native PC port of the original Xbox version of Splinter Cell: Doub
 > [!NOTE]
 > This project does not include any game assets. You must provide the files from your own legally acquired copy of the game to install or build.
 
-## About this fork
-The goal of this fork is to extend compatibility with older CPUs. Builds from the original [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo require SSE4.x CPU instructions, this fork replaces them with instructions that older CPUs can execute. The current target is AMD K10 (Phenom-era) CPUs. There should not be any behavior changes to the game, everything should function the same as builds from the original repo.
+## About this Fork
+This fork aims to extend compatibility with older CPUs. Builds from the upstream [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo require SSE4.x CPU instructions, this fork replaces them with instructions that older CPUs can execute. The current target is AMD K10 (Phenom-era) CPUs.
 
 > [!IMPORTANT]
 > POPCNT is still required.
 
-## Installation
-Ask yourself, **do you really need this legacy build?** It will work on newer CPUs, but will not take advantage of SSE4.x CPU instructions. If you're unsure, you probably don't need this build. Please try a build from the original [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo first.
+No gameplay behavior changes are expected, everything should function identically to builds from the upstream repo.
 
-No releases of this fork are currently planned until more testing has been done. In the meantime, you can build it from source (see [build instructions](#Building) below).
+## Installation
+**Do you really need this legacy build?** It will work on newer CPUs, but will not take advantage of SSE4.x CPU instructions. If you're unsure, you likely don't need this build. Please try a build from the upstream repo first.
+
+The latest version of [SCDA-XBERecomp-Legacy](https://github.com/Someone7272/SCDA-XBERecomp-Legacy/releases) can be found in the Releases page.
+
+- Place your game files in the `assets` folder. This can be an ISO, or the extracted data files.
+- Run `SCDA.exe`. The first start compiles the game's code for your PC, this only happens once.
+- Recomp Settings can be adjusted in the in-game options menu while the game is running, or through the Settings overlay, which is opened with <kbd>F10</kbd> by default.
+
+You can also build the source code manually (see [build instructions](#Building) below).
 
 <img width="1920" height="1080" alt="Recomp Settings" src="https://github.com/user-attachments/assets/d13e1fb6-ba97-4067-84e1-c2362d66d7c4"/>
 
-## Reporting issues
-Only issues that are specific to this fork will be investigated. If you can reproduce the same issue with a build from the original [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo, it belongs there.
+## Reporting Issues
+Only issues that are specific to this fork will be investigated. If you can reproduce the same issue with a build from the upstream repo, you should create the issue there.
 
 ## Features
 ### Display
