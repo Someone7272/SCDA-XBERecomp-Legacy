@@ -23,7 +23,7 @@ The latest version of [SCDA-XBERecomp-Legacy](https://github.com/Someone7272/SCD
 
 You can also build the source code manually (see [build instructions](#Building) below).
 
-<img width="1920" height="1080" alt="Recomp Settings" src="https://github.com/user-attachments/assets/d13e1fb6-ba97-4067-84e1-c2362d66d7c4"/>
+<img width="1440" height="900" alt="Main Menu" src="https://github.com/user-attachments/assets/a763971c-28d5-4485-9912-ffdc7c0d736f" />
 
 ## Reporting Issues
 Only issues that are specific to this fork will be investigated. If you can reproduce the same issue with a build from the upstream repo, you should create the issue there.
