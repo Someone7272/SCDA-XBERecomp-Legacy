@@ -8,7 +8,7 @@ An unofficial native PC port of the original Xbox version of Splinter Cell: Doub
 This fork aims to extend compatibility with older CPUs. Builds from the upstream [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo require SSE4.x CPU instructions, this fork replaces them with instructions that older CPUs can execute. The current target is AMD K10 (Phenom-era) CPUs.
 
 > [!IMPORTANT]
-> POPCNT is still required.
+> **POPCNT** is still required.
 
 No gameplay behavior changes are expected, everything should function identically to builds from the upstream repo.
 
