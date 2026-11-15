@@ -8,12 +8,12 @@ An unofficial native PC port of the original Xbox version of Splinter Cell: Doub
 This fork aims to extend compatibility with older CPUs. Builds from the upstream [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo require SSE4.x CPU instructions, this fork replaces them with instructions that older CPUs can execute. The current target is AMD K10 (Phenom-era) CPUs.
 
 > [!IMPORTANT]
-> **POPCNT** is still required.
+> The **POPCNT** instruction is still required.
 
 No gameplay behavior changes are expected, everything should function identically to builds from the upstream repo.
 
 ## Installation
-**Do you really need this legacy build?** It will work on newer CPUs, but will not take advantage of SSE4.x CPU instructions. If you're unsure, you likely don't need this build. Please try a build from the upstream repo first.
+**Do you really need this legacy build?** It will work on CPUs that support SSE4.x instructions but won't take advantage of them. If your CPU is less than 15 years old, you likely don't need this build. Please try a build from the upstream repo first.
 
 The latest version of [SCDA-XBERecomp-Legacy](https://github.com/Someone7272/SCDA-XBERecomp-Legacy/releases) can be found in the Releases page.
 
@@ -189,7 +189,7 @@ As the host, you must port forward the following ports on your router so other p
 ### Minimum
 - **OS**
   - Windows 10 64-bit
-- **CPU** with 2 cores and support for SSE2 and POPCNT
+- **CPU** with 2 cores and support for SSE3 and POPCNT
   - Intel Nehalem (Intel Core 1st Generation)
   - AMD K10 (AMD Phenom Series)
 - **GPU** with support for Direct3D 12
@@ -226,3 +226,6 @@ Install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) and 
 ### 4. Build the Project
 - Run `build.bat`. The first build recompiles the entire game and can take 30 to 90 minutes on weaker systems.
 - When it finishes, run `out\build\release\SCDA.exe`.
+
+## Credits
+Thanks to **TGP482** and **Joshhhuaaa** for their work on the upstream [SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) and [XboxXBERecomp](https://github.com/TGP482/XboxXBERecomp) projects.
