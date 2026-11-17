@@ -8,12 +8,17 @@ An unofficial native PC port of the original Xbox version of Splinter Cell: Doub
 This fork aims to extend compatibility with older CPUs. Builds from the upstream [TGP482/SCDA-XBERecomp](https://github.com/TGP482/SCDA-XBERecomp) repo require SSE4.x CPU instructions, this fork replaces them with instructions that older CPUs can execute. The current target is AMD K10 (Phenom-era) CPUs.
 
 > [!IMPORTANT]
-> The **POPCNT** instruction is still required.
+> The **POPCNT** instruction is still required, see the [System Requirements](#system-requirements) section.
 
 No gameplay behavior changes are expected, everything should function identically to builds from the upstream repo.
 
+### Can you make the XBERecomp of game X run on my old CPU?
+Maybe, but this fork is scoped to Splinter Cell: Double Agent. It would be better to suggest compiling with older instruction sets in the [XboxXBERecomp](https://github.com/TGP482/XboxXBERecomp) project, as this could benefit multiple game projects based on XBERecomp.
+
+Original Xbox games don't contain SSE4.x or POPCNT instructions in their code because the console's Pentium III CPU doesn't support them. Modern compilers generate these instructions as optimizations.
+
 ## Installation
-**Do you really need this legacy build?** It will work on CPUs that support SSE4.x instructions but won't take advantage of them. If your CPU is less than 15 years old, you likely don't need this build. Please try a build from the upstream repo first.
+**Do you really need this legacy build?** It will work on newer CPUs that support SSE4.x instructions but won't take advantage of them. If your CPU is less than 15 years old, you likely don't need this build. Please try a build from the upstream repo first.
 
 The latest version of [SCDA-XBERecomp-Legacy](https://github.com/Someone7272/SCDA-XBERecomp-Legacy/releases) can be found in the Releases page.
 
@@ -21,7 +26,7 @@ The latest version of [SCDA-XBERecomp-Legacy](https://github.com/Someone7272/SCD
 - Run `SCDA.exe`. The first start compiles the game's code for your PC, this only happens once.
 - Recomp Settings can be adjusted in the in-game options menu while the game is running, or through the Settings overlay, which is opened with <kbd>F10</kbd> by default.
 
-You can also build the source code manually (see [build instructions](#Building) below).
+You can also build the source code manually (see [build instructions](#building) below).
 
 <img width="1440" height="900" alt="Main Menu" src="https://github.com/user-attachments/assets/a763971c-28d5-4485-9912-ffdc7c0d736f" />
 
